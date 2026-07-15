@@ -84,4 +84,78 @@ Course: Database Management System (DBMS)
 
 Project: E-Commerce Order Management Database System
 
-Week: 1 – Understanding the Business Problem.
+Week 1: – Understanding the Business Problem.
+
+# Week 2 – Entity and Relationship Analysis
+### E-Commerce Order Management Database System
+
+## Project Overview
+This folder contains the Week 2 deliverables for the **E-Commerce Order Management Database
+System** semester project. Building on the Week 1 Software Requirement Specification (SRS), Week
+2 identifies every entity's attributes, keys, and constraints, and analyzes the relationships and
+cardinalities between entities in preparation for normalization and SQL implementation.
+
+## Scope of This Week
+- Identification of all entities required for the system
+- Full attribute list for each entity
+- Primary Key (PK) identification, including NOT NULL, UNIQUE, CHECK, and DEFAULT constraints
+- Foreign Key (FK) identification wherever applicable
+- Relationship analysis between entities
+- Cardinality analysis (One-to-One, One-to-Many, Many-to-Many)
+- Consolidated Entity-Relationship (ER) diagram
+
+## Repository Structure
+```
+Week2/
+├── Entity_Analysis_Report.pdf          # Entity identification, attribute list,
+│                                        # PK/FK identification with constraints
+├── Entity_Relationship_Analysis.pdf    # Relationship analysis, cardinality analysis,
+│                                        # and consolidated ER diagram
+└── README.md                           # This file
+```
+
+## Document Summaries
+
+**Entity_Analysis_Report.pdf**
+- Entity identification (all 9 core entities and their role: master vs. transaction)
+- Full attribute list per entity, with SQL data types
+- Primary Key, Foreign Key, NOT NULL, UNIQUE, CHECK, and DEFAULT constraints for every attribute
+- Consolidated PK/FK summary table
+- Notes and assumptions (including the Supplier–Product linkage limitation, see below)
+
+**Entity_Relationship_Analysis.pdf**
+- Relationship analysis for every foreign key link between entities
+- Cardinality analysis (1:1, 1:M, M:N) with participation rules
+- Entity-Relationship diagram covering all 9 entities
+- Summary of the overall data model
+
+## Key Findings
+- **9 entities**, **8 enforceable relationships**: 6 one-to-many, 2 one-to-one, and 1 many-to-many
+  (Order ↔ Product) resolved through the **Order Details** associative entity.
+- **Supplier** could not be linked via foreign key to any other entity because the fixed Week 1
+  attribute list does not include a `Supplier_ID` attribute on `Product`. This is documented as a
+  known limitation of the current fixed schema, carried forward from Week 1, rather than a
+  modelling omission.
+
+## How to Use
+1. Read `Entity_Analysis_Report.pdf` for the full attribute-level data dictionary (types, keys,
+   constraints) for every entity.
+2. Read `Entity_Relationship_Analysis.pdf` for how the entities connect to one another and the ER
+   diagram that will drive schema implementation.
+
+## Project Roadmap
+- **Week 1:** Business requirement analysis & SRS ✅
+- **Week 2:** Entity and relationship analysis (this submission) ✅
+- **Week 3+:** Normalization and SQL schema implementation (to follow)
+
+## Author
+Prepared as an original submission for the E-Commerce Order Management Database System semester
+project.
+Name: Akash raj T
+
+Course: Database Management System (DBMS)
+
+Project: E-Commerce Order Management Database System
+
+Week 2: Entity and Relationship Analysis
+
